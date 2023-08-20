@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Articles</title>
+</head>
+<body>
+    <h1  style="color: green;">Threads</h1>
+    <ul>
+        {% for thread in threads %}
+            <li>
+                <h2  style="color: #007bff;"> Title: </h2>
+                <p> {{ thread.title }}</p>
+                <h2  style="color: #007bff;">Author:</h2>
+                <p> {{ thread.author }}</p>
+                <h2  style="color: #007bff;">Created_utc:</h2>
+                <p>{{ thread.created_utc }}</p>
+                <h2 style="color: #007bff;">Link:</h2>
+                <p>{{ thread.link }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
